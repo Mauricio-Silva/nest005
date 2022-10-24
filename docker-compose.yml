@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nest005mysql:
+    image: mysql:latest
+    container_name: nest005mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./database:/var/lib/mysql
